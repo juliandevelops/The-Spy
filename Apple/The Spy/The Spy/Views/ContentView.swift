@@ -21,10 +21,10 @@ internal struct ContentView: View {
     
     @State private var rolesShowing : Bool = false
     
-    @State private var numberPlayer : String = ""
-    
-    @State private var numberSpies : String = ""
-    
+    @State private var numberPlayer : Int = 3
+
+    @State private var numberSpies : Int = 1
+
     @State private var configSheetShown : Bool = false
     
     private var viewController : UIViewController?
@@ -37,13 +37,13 @@ internal struct ContentView: View {
                 GameView(gameRunning: $gameRunning)
                     .onAppear {
                         rolesShowing = false
-                        numberSpies = ""
-                        numberPlayer = ""
+                        numberSpies = 1
+                        numberPlayer = 3
                     }
             } else if rolesShowing {
                 RoleViewer(
-                    numberPlayer: Int(numberPlayer)!,
-                    numberSpies: Int(numberSpies)!,
+                    numberPlayer: numberPlayer,
+                    numberSpies: numberSpies,
                     gameRunning: $gameRunning,
                     players: $players
                 )
@@ -56,26 +56,26 @@ internal struct ContentView: View {
                             .foregroundStyle(.white)
                             .frame(width: 210, height: 70)
                             .backgroundStyle(.clear)
-                            .glassEffect(.clear, in: .rect(cornerRadius: 20))
+                            .glass(.clear, in: .rect(cornerRadius: 20))
                     }
                     NavigationLink {
                         CategoryViewer()
                     } label: {
-                        Text("Categories")
+                        Text("Words")
                             .foregroundStyle(.white)
                             .frame(width: 210, height: 70)
                             .backgroundStyle(.clear)
-                            .glassEffect(.clear, in: .rect(cornerRadius: 20))
+                            .glass(.clear, in: .rect(cornerRadius: 20))
                     }
                     .padding(.vertical, 10)
                     NavigationLink {
                         ConfigView()
                     } label: {
-                        Text("Further Configuration")
+                        Text("Select Categories")
                             .foregroundStyle(.white)
                             .frame(width: 210, height: 70)
                             .backgroundStyle(.clear)
-                            .glassEffect(.clear, in: .rect(cornerRadius: 20))
+                            .glass(.clear, in: .rect(cornerRadius: 20))
                     }
                 }
                 .background {

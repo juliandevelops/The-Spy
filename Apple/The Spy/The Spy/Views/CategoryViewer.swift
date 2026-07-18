@@ -36,7 +36,7 @@ struct CategoryViewer: View {
                 }
             }
         }
-        .navigationTitle("Categories")
+        .navigationTitle("Words")
     }
 }
 

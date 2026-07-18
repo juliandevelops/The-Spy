@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+/// View to display the roles of the players
 internal struct RoleViewer: View {
     
     @Query private var configs : [Configuration]
@@ -33,8 +34,8 @@ internal struct RoleViewer: View {
     
     @State private var word : String
     
-    @State private var counter : Int = 1
-    
+    @State private var counter : Int = 0
+
     @State private var spyNumbers : [Int]
     
     @State private var textToShow : String = ""
@@ -51,9 +52,8 @@ internal struct RoleViewer: View {
                 if (hidden) {
                     Spacer()
                 }
-                if !(counter > numberPlayer) {
-                    let index = Int(floor(Double(counter / 2)))
-                    Text("\(players[index].name)")
+                if !(counter >= numberPlayer) {
+                    Text("\(players[counter].name)")
                         .font(.largeTitle)
                         .padding(.all, 20)
                 } else {
@@ -63,7 +63,7 @@ internal struct RoleViewer: View {
                     Spacer()
                 }
                 Group {
-                    if counter > numberPlayer {
+                    if counter >= numberPlayer {
                         Text("Tap to start")
                     } else if hidden {
                         Text("Tap to show")
@@ -96,9 +96,9 @@ internal struct RoleViewer: View {
                 loadingErrorPresented.toggle()
             }
             for _ in 1...numberSpies {
-                var rm = Int.random(in: 1...numberPlayer)
+                var rm = Int.random(in: 0..<numberPlayer)
                 while spyNumbers.contains(rm) {
-                    rm = Int.random(in: 1...numberPlayer)
+                    rm = Int.random(in: 0..<numberPlayer)
                 }
                 spyNumbers.append(rm)
             }
@@ -114,16 +114,18 @@ internal struct RoleViewer: View {
             Text("An error occured while loading the words.\nPlease try again.")
         }
     }
-    
+
+    /// Executed on button tap
     private func btnTap() -> Void {
         guard hidden else {
             hidden.toggle()
             counter += 1
+            print("")
             return
         }
         if spyNumbers.contains(counter) {
             textToShow = String(localized: "You're a Spy")
-        } else if counter > numberPlayer {
+        } else if counter >= numberPlayer {
             gameRunning.wrappedValue = true
             dismiss()
         } else {

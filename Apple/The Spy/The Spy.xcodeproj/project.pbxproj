@@ -53,6 +53,8 @@
 		849CB3182C92E83000F70594 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		849CB31A2C92E91200F70594 /* SettingsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHandler.swift; sourceTree = "<group>"; };
 		84B97C1B2C8F2909005F2C81 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/words.json; sourceTree = "<group>"; };
+		84EBB6452EFFF358003B5666 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fr; path = fr.lproj/words.json; sourceTree = "<group>"; };
+		84EBB6462EFFF35A003B5666 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/words.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -239,6 +241,8 @@
 				en,
 				de,
 				Base,
+				fr,
+				es,
 			);
 			mainGroup = 846A1CFF2BEB636600BCF715;
 			preferredProjectObjectVersion = 90;
@@ -318,6 +322,8 @@
 			children = (
 				84B97C1B2C8F2909005F2C81 /* de */,
 				849CB3122C92298300F70594 /* en */,
+				84EBB6452EFFF358003B5666 /* fr */,
+				84EBB6462EFFF35A003B5666 /* es */,
 			);
 			name = words.json;
 			sourceTree = "<group>";
@@ -477,11 +483,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jules.the-spy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -522,11 +528,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.jules.the-spy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;

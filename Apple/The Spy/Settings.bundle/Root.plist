@@ -10,7 +10,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>App Version</string>
+			<string>App version</string>
 			<key>Key</key>
 			<string>app_version_preference</string>
 			<key>DefaultValue</key>
@@ -20,7 +20,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Build Version</string>
+			<string>Build version</string>
 			<key>Key</key>
 			<string>build_version_preference</string>
 			<key>DefaultValue</key>

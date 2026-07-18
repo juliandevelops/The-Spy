@@ -36,6 +36,7 @@ internal struct ConfigView: View {
                 SelectableRow(selection: $selection, category: category)
             }
         }
+        .navigationTitle("Categories")
         .onAppear {
             selection.append(contentsOf: configs.first!.unselectedCategories)
         }
@@ -77,6 +78,7 @@ private struct SelectableRow: View {
             .foregroundStyle(.primary)
             Text(category)
         }
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
