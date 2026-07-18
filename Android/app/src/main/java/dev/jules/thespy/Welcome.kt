@@ -36,7 +36,8 @@ internal fun Welcome(
                 .padding(it),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
+
+            ) {
             Button(onClick = { onNavigateNew() }) {
                 Text(stringResource(R.string.new_game))
             }

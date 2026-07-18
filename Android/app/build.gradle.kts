@@ -3,7 +3,6 @@ import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
 }
@@ -25,7 +24,7 @@ android {
         }
     }
     namespace = "dev.jules.thespy"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "dev.jules.thespy"
@@ -56,8 +55,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_24
-        targetCompatibility = JavaVersion.VERSION_24
+        sourceCompatibility = JavaVersion.VERSION_26
+        targetCompatibility = JavaVersion.VERSION_26
     }
     buildFeatures {
         compose = true
@@ -71,12 +70,13 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-    buildToolsVersion = "35.0.0"
-    ndkVersion = "27.0.11718014 rc1"
+    buildToolsVersion = "37.0.0"
+    ndkVersion = "30.0.14904198 rc1"
     dependenciesInfo {
         includeInApk = true
         includeInBundle = true
     }
+    compileSdkMinor = 0
 }
 
 dependencies {
