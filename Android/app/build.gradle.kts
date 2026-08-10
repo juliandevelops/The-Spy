@@ -30,7 +30,7 @@ android {
         applicationId = "dev.jules.thespy"
         minSdk = 34
         targetSdk = 37
-        versionCode = 2
+        versionCode = 3
         versionName = "2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
