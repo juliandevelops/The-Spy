@@ -29,9 +29,9 @@ android {
     defaultConfig {
         applicationId = "dev.jules.thespy"
         minSdk = 34
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 2
-        versionName = "2.0"
+        versionName = "2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -55,8 +55,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_26
-        targetCompatibility = JavaVersion.VERSION_26
+        sourceCompatibility = JavaVersion.VERSION_24
+        targetCompatibility = JavaVersion.VERSION_24
     }
     buildFeatures {
         compose = true
@@ -71,12 +71,12 @@ android {
         }
     }
     buildToolsVersion = "37.0.0"
-    ndkVersion = "30.0.14904198 rc1"
+    ndkVersion = "30.0.15729638 rc2"
     dependenciesInfo {
         includeInApk = true
         includeInBundle = true
     }
-    compileSdkMinor = 0
+    compileSdkMinor = 1
 }
 
 dependencies {
